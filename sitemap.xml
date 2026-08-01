@@ -136,6 +136,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/life/jadongchasee-yeonnap/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/life/jonghap-sodeukse-yeongeum/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -247,6 +253,11 @@
     <loc>https://ansiminfo.com/calc/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/calc/jadongchasee-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://ansiminfo.com/calc/jeungyeosee-gyesangi/</loc>
