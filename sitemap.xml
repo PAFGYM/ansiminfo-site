@@ -52,7 +52,19 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/digital_howto/jeongbu24-deungbon-balgeup/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/digital_howto/kakaotalk-geulssi-keuge/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/health/chimae-ansimsenteo/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -124,6 +136,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/life/yeonmal-jeongsan-bumo-gongje/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/pension/gicho-yeongeum-sugeup-jagyeok/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -167,6 +185,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/subsidy/noin-iljari-sincheong/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/subsidy/noin-matchum-dolbom/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
