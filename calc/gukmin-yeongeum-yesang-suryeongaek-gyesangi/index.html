@@ -331,7 +331,7 @@
     <button type="submit" class="calc-submit">계산하기</button>
   </form>
   <div id="calc-result-pension-estimate" class="calc-result" role="status" aria-live="polite"></div>
-  <p class="calc-disclaimer">⚠️ 이 결과는 국민연금 기본연금액 산식을 단순화한 간이 추정치이며, 실제 수령액과 차이가 있을 수 있습니다. 정확한 금액은 국민연금공단 공식 홈페이지의 예상연금 모의계산에서 확인하세요.</p>
+  <p class="calc-disclaimer">⚠️ 2026년 A값(전체가입자 평균소득월액 3,193,511원)과 소득대체율 40%를 적용한 간이 추정치입니다. 실제 연금액은 가입기간별 비례상수와 재평가율에 따라 달라지므로, 정확한 금액은 국민연금공단 &quot;내 연금 알아보기&quot;에서 본인 가입이력으로 확인하세요.</p>
   <a class="calc-official-link" href="https://www.nps.or.kr" target="_blank" rel="noopener noreferrer">공식 계산기(국민연금공단) 바로가기</a>
 </div>
 <script>
@@ -339,7 +339,7 @@
   function compute(inputs) {
   var years = inputs.years;
   var avgIncome = inputs.avgIncome;
-  var A_MANWON = 300; // 2024년 발표 전체가입자 평균소득월액(A값) 근사치, 만원 단위(간이 고정값)
+  var A_MANWON = 319.35; // 2026년 A값(전체가입자 평균소득월액) 3,193,511원 — 국민연금공단 공표치
   var REPLACEMENT_TARGET = 0.4; // 2028년 이후 신규수급자 기준, 40년 가입 시 목표 소득대체율
   if (!(years >= 1) || !(avgIncome >= 1)) {
     return { eligible: false, reason: "invalid", years: years };
