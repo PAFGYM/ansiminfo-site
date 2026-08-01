@@ -1,0 +1,354 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>계산기 모음 - 생활정보 나침반</title>
+<meta name="description" content="연금·지원금 등 405060 세대에게 필요한 간이 계산기 모음입니다.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ansiminfo.com/calc/">
+<meta property="og:site_name" content="생활정보 나침반">
+<meta property="og:type" content="website">
+<meta property="og:title" content="계산기 모음 - 생활정보 나침반">
+<meta property="og:description" content="연금·지원금 등 405060 세대에게 필요한 간이 계산기 모음입니다.">
+<meta property="og:url" content="https://ansiminfo.com/calc/">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="계산기 모음 - 생활정보 나침반">
+<meta name="twitter:description" content="연금·지원금 등 405060 세대에게 필요한 간이 계산기 모음입니다.">
+<style>
+  :root {
+    --ink: #201d17; --paper: #fbf9f4; --muted: #5c574c; --line: #ddd5c1; --accent: #1d4ed8;
+    --accent-ink: #0b3ea8; --card: #ffffff; --ok: #047857; --bad: #b91c1c;
+    --warn-bg: #fff6df; --warn-border: #d9a418;
+    --font-size-base: 19px; --line-height-base: 1.8;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #f2eee2; --paper: #141310; --muted: #beb6a0; --line: #3c372c; --accent: #8fb0ff;
+      --accent-ink: #cfe0ff; --card: #1d1b16; --ok: #34d399; --bad: #f87171;
+      --warn-bg: #2b230f; --warn-border: #8a6a1a;
+    }
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0; background: var(--paper); color: var(--ink);
+    font-family: "Apple SD Gothic Neo", "Malgun Gothic", "Pretendard", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: var(--font-size-base); line-height: var(--line-height-base);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent-ink); }
+  a:focus, button:focus, input:focus, summary:focus { outline: 3px solid var(--accent); outline-offset: 2px; }
+  img { max-width: 100%; height: auto; border-radius: 10px; }
+  .wrap { max-width: 780px; margin: 0 auto; padding: 0 20px 64px; }
+  .wide-wrap { max-width: 1080px; margin: 0 auto; padding: 0 20px 64px; }
+
+  /* 상단 고지 바 — 공식 기관 아님 + 공식 링크 큰 버튼 */
+  .disclaimer-bar {
+    background: var(--warn-bg); border-bottom: 2px solid var(--warn-border);
+    padding: 12px 20px; font-size: 15px; text-align: center; line-height: 1.6;
+  }
+  .disclaimer-bar strong { display: block; margin-bottom: 4px; }
+
+  .btn-official {
+    display: inline-block; margin-top: 8px; background: var(--ink); color: var(--paper) !important;
+    font-weight: 800; padding: 14px 26px; border-radius: 12px; font-size: 1.05em; text-decoration: none;
+    min-height: 48px; line-height: 1.2;
+  }
+  .btn-official:hover { opacity: 0.9; }
+
+  /* 공유 바 — 상단 고정, 카카오톡 공유(navigator.share 우선, 실패 시 링크 복사 폴백) */
+  .share-bar {
+    position: sticky; top: 0; z-index: 60; background: var(--card); border-bottom: 1px solid var(--line);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    padding: 10px 20px;
+  }
+  .share-bar .brand { font-weight: 800; font-size: 17px; text-decoration: none; color: var(--ink); }
+  .share-btn {
+    display: inline-flex; align-items: center; gap: 6px; font-weight: 700; font-size: 15px;
+    padding: 10px 16px; border-radius: 999px; border: 2px solid var(--ink); background: var(--ink);
+    color: var(--paper); cursor: pointer; min-height: 44px;
+  }
+  .share-status { font-size: 13px; color: var(--ok); margin-left: 8px; }
+
+  nav.site-nav {
+    display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 12px 20px; border-bottom: 1px solid var(--line);
+    font-size: 15px; font-weight: 700;
+  }
+  nav.site-nav a { text-decoration: none; color: var(--muted); padding: 4px 2px; }
+  nav.site-nav a.active, nav.site-nav a:hover { color: var(--accent-ink); border-bottom: 3px solid var(--accent); }
+
+  .breadcrumb { font-size: 14px; color: var(--muted); margin: 18px 0 6px; }
+  .breadcrumb a { color: var(--muted); text-decoration: underline; }
+  .crumb-sep { margin: 0 4px; }
+
+  h1 { font-size: 1.85em; line-height: 1.35; margin: 6px 0 10px; letter-spacing: -0.01em; }
+  h2 { font-size: 1.4em; margin: 1.6em 0 0.5em; padding-top: 4px; border-top: 3px solid var(--line); padding-top: 14px; }
+  h3 { font-size: 1.15em; margin: 1.4em 0 0.4em; }
+  p { margin: 0 0 1.1em; }
+  ul, ol { padding-left: 1.4em; margin: 0 0 1.1em; }
+  li { margin-bottom: 0.5em; }
+  hr { border: none; border-top: 2px solid var(--line); margin: 2em 0; }
+  code { background: var(--card); border: 1px solid var(--line); border-radius: 6px; padding: 0.1em 0.4em; font-size: 0.92em; }
+  pre { background: var(--card); border: 1px solid var(--line); border-radius: 10px; padding: 14px; overflow-x: auto; }
+  pre code { border: none; padding: 0; }
+  blockquote {
+    margin: 1.2em 0; padding: 12px 18px; background: var(--warn-bg); border-left: 5px solid var(--warn-border);
+    border-radius: 8px;
+  }
+  blockquote p { margin: 0; }
+
+  .table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; margin: 1.2em 0; border: 1px solid var(--line); border-radius: 10px; }
+  table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; background: var(--card); }
+  th, td { padding: 12px 14px; border-bottom: 1px solid var(--line); text-align: left; font-size: 0.94em; }
+  th { background: rgba(0,0,0,0.03); font-weight: 800; white-space: nowrap; }
+
+  figure.md-figure { margin: 1.4em 0; text-align: center; }
+  figure.md-figure figcaption { font-size: 13.5px; color: var(--muted); margin-top: 6px; }
+
+  .summary-box {
+    background: var(--card); border: 1px solid var(--line); border-left: 6px solid var(--accent);
+    border-radius: 12px; padding: 16px 18px; margin: 18px 0 26px; font-size: 1.02em;
+  }
+  .summary-box .label { font-size: 13px; font-weight: 800; color: var(--accent-ink); letter-spacing: 0.03em; margin-bottom: 6px; }
+
+  .toc-box {
+    background: var(--card); border: 1px solid var(--line); border-radius: 12px; padding: 16px 20px; margin: 0 0 26px;
+  }
+  .toc-box summary { font-weight: 800; font-size: 1.02em; cursor: pointer; }
+  .toc-box ol { margin: 12px 0 0; padding-left: 1.2em; }
+  .toc-box li { margin-bottom: 0.35em; }
+  .toc-box a { text-decoration: none; }
+  .toc-box a:hover { text-decoration: underline; }
+
+  /* 광고 슬롯 — "다음 단계" 버튼류와 절대 인접하지 않도록 상하 여백을 크게 두고,
+     항상 명확한 라벨을 붙여 콘텐츠/버튼과 혼동되지 않게 한다. */
+  .ad-slot {
+    margin: 34px 0; padding: 14px; border: 1px dashed var(--line); border-radius: 10px;
+    text-align: center; color: var(--muted); font-size: 13px;
+  }
+  .ad-slot .ad-label { display: block; font-size: 11px; letter-spacing: 0.08em; margin-bottom: 4px; }
+
+  .related-box { margin-top: 40px; padding-top: 20px; border-top: 3px solid var(--line); }
+  .related-box h2 { border-top: none; padding-top: 0; }
+  .related-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 12px; }
+  .related-list a {
+    display: block; padding: 14px 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--card);
+    text-decoration: none; color: var(--ink); font-weight: 700;
+  }
+  .related-list .related-cat { display: block; font-size: 12.5px; color: var(--muted); font-weight: 700; margin-bottom: 4px; }
+
+  footer.page-footer {
+    margin-top: 44px; padding-top: 20px; border-top: 1px solid var(--line);
+    font-size: 13.5px; color: var(--muted); line-height: 1.8;
+  }
+  footer.page-footer .sources-title { font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+  footer.page-footer ul { padding-left: 1.2em; margin: 6px 0 14px; }
+
+  .cat-card-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 14px; margin: 20px 0 36px; }
+  .cat-card {
+    display: block; padding: 20px; border: 1px solid var(--line); border-radius: 14px; background: var(--card);
+    text-decoration: none; color: var(--ink);
+  }
+  .cat-card .cat-label { font-size: 1.15em; font-weight: 800; }
+  .cat-card .cat-count { font-size: 13px; color: var(--muted); margin-top: 6px; }
+
+  .article-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+  .article-list li { border: 1px solid var(--line); border-radius: 12px; padding: 16px 18px; background: var(--card); }
+  .article-list a { text-decoration: none; color: var(--ink); font-weight: 800; font-size: 1.08em; }
+  .article-list .a-desc { color: var(--muted); font-size: 0.92em; margin-top: 6px; }
+  .article-list .a-meta { color: var(--muted); font-size: 12.5px; margin-top: 8px; }
+
+  /* 계산기 위젯 */
+  .calc-widget {
+    background: var(--card); border: 2px solid var(--ink); border-radius: 16px; padding: 22px 22px 20px;
+    margin: 24px 0;
+  }
+  .calc-title { margin: 0 0 6px; font-size: 1.2em; }
+  .calc-desc { color: var(--muted); margin: 0 0 16px; font-size: 0.95em; }
+  .calc-field { margin-bottom: 16px; }
+  .calc-field label { display: block; font-weight: 800; margin-bottom: 6px; }
+  .calc-input-row { display: flex; align-items: center; gap: 10px; }
+  .calc-input-row input {
+    font-size: 1.15em; padding: 12px 14px; border-radius: 10px; border: 2px solid var(--line);
+    background: var(--paper); color: var(--ink); width: 100%; max-width: 220px; min-height: 48px;
+  }
+  .calc-unit { font-size: 1em; color: var(--muted); font-weight: 700; }
+  .calc-help { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+  .calc-submit {
+    font-size: 1.05em; font-weight: 800; padding: 14px 24px; border-radius: 12px; border: 2px solid var(--ink);
+    background: var(--ink); color: var(--paper); cursor: pointer; min-height: 48px; margin-top: 4px;
+  }
+  .calc-result { margin-top: 18px; min-height: 1px; }
+  .calc-result-box { background: var(--warn-bg); border: 2px solid var(--warn-border); border-radius: 12px; padding: 16px 18px; }
+  .calc-result-label { font-size: 13px; font-weight: 800; color: var(--muted); }
+  .calc-result-value { font-size: 1.7em; font-weight: 900; font-variant-numeric: tabular-nums; margin: 4px 0; }
+  .calc-result-note { margin: 0; font-size: 13px; color: var(--muted); }
+  .calc-error { color: var(--bad); font-weight: 700; }
+  .calc-disclaimer { font-size: 13px; color: var(--muted); margin: 16px 0 10px; }
+  .calc-official-link {
+    display: inline-block; font-weight: 800; text-decoration: none; padding: 10px 16px; border-radius: 10px;
+    border: 2px solid var(--accent); color: var(--accent-ink);
+  }
+
+  /* 전역 푸터 — 애드센스 심사에 필요한 정책 페이지 링크를 모든 페이지에 노출한다 */
+  footer.site-footer {
+    margin-top: 40px; padding: 24px 20px 30px; border-top: 2px solid var(--line);
+    background: var(--card); font-size: 14px; color: var(--muted);
+  }
+  footer.site-footer .foot-links { display: flex; flex-wrap: wrap; gap: 10px 18px; margin-bottom: 12px; }
+  footer.site-footer .foot-links a { color: var(--ink); font-weight: 700; min-height: 44px; display: inline-flex; align-items: center; }
+  footer.site-footer p { margin: 4px 0; line-height: 1.7; }
+
+  /* 글씨 크기 조절 — 브라우저 설정을 못 찾는 이용자를 위한 직접 버튼 */
+  .font-toggle { display: flex; gap: 6px; align-items: center; }
+  .font-toggle button {
+    min-width: 46px; min-height: 44px; border: 2px solid var(--line); background: var(--paper);
+    color: var(--ink); border-radius: 10px; font-size: 15px; font-weight: 800; cursor: pointer;
+  }
+
+  /* 모바일 하단 고정 메뉴 — 한 손으로 닿는 위치에 주요 이동 경로를 둔다 */
+  .tabbar { display: none; }
+  @media (max-width: 767px) {
+    body { padding-bottom: 68px; }
+    .tabbar {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 70; display: flex;
+      background: var(--card); border-top: 1px solid var(--line);
+      box-shadow: 0 -2px 12px rgba(0,0,0,0.08); padding-bottom: env(safe-area-inset-bottom);
+    }
+    .tabbar a {
+      flex: 1; min-height: 60px; display: flex; flex-direction: column; align-items: center;
+      justify-content: center; gap: 2px; font-size: 12px; font-weight: 800; color: var(--muted);
+      text-decoration: none;
+    }
+    .tabbar a .ico { font-size: 19px; line-height: 1; }
+    .tabbar a[aria-current="page"] { color: var(--accent-ink); }
+  }
+
+  @media (max-width: 480px) {
+    :root { --font-size-base: 18px; }
+    .wrap, .wide-wrap { padding: 0 14px 56px; }
+  }
+
+  @media print {
+    .share-bar, nav.site-nav, .ad-slot, .btn-official, .calc-widget button, .disclaimer-bar { display: none; }
+    body { font-size: 12pt; color: #000; background: #fff; }
+    a { color: #000; text-decoration: underline; }
+  }
+</style>
+
+</head>
+<body class="page-calc-index">
+  <div class="disclaimer-bar">
+    <strong>본 사이트는 공식 기관이 아닌 안내 사이트입니다.</strong>
+    
+  </div>
+  <div class="share-bar">
+    <a class="brand" href="/">생활정보 나침반</a>
+    <div class="font-toggle" role="group" aria-label="글씨 크기 조절">
+      <button type="button" data-font="down" aria-label="글씨 작게">가−</button>
+      <button type="button" data-font="up" aria-label="글씨 크게">가＋</button>
+    </div>
+    <button id="shareBtn" class="share-btn" type="button" aria-label="카카오톡으로 공유하기">🔗 공유</button>
+    <span id="shareStatus" class="share-status" role="status" aria-live="polite"></span>
+  </div>
+  <nav class="site-nav" aria-label="카테고리">
+      <a href="/" aria-current="page" class="active">홈</a>
+      <a href="/pension/">연금</a>
+      <a href="/digital_howto/">디지털 사용법</a>
+      <a href="/subsidy/">지원금</a>
+      <a href="/insurance/">보험</a>
+      <a href="/health/">건강</a>
+      <a href="/inheritance/">상속</a>
+      <a href="/implant/">임플란트</a>
+      <a href="/life/">라이프</a>
+  </nav>
+  <main class="wide-wrap">
+    
+    
+  <h1>계산기 모음</h1>
+  <p class="summary-box"><span class="label">간이 계산기</span>정확한 금액은 항상 공식 사이트에서 다시 확인하세요.</p>
+  <ul class="article-list">
+    <li>
+      <a href="/calc/jeungyeosee-gyesangi/">증여세 계산기 — 자녀에게 얼마까지 세금 없이</a>
+      <div class="a-desc">증여 금액과 관계만 고르면 공제 후 낼 증여세를 계산합니다. 10년 합산 기준도 함께 안내합니다.</div>
+    </li>
+    <li>
+      <a href="/calc/sangsoksee-gyesangi/">상속세 계산기 — 얼마부터 내나</a>
+      <div class="a-desc">상속받는 재산과 배우자 유무만 넣으면 상속세가 나오는지, 나온다면 얼마인지 바로 계산합니다.</div>
+    </li>
+    <li>
+      <a href="/calc/gukmin-yeongeum-suryeong-nai-gyesangi/">국민연금 수령나이 계산기 — 몇 살부터 받나</a>
+      <div class="a-desc">태어난 해만 넣으면 국민연금을 언제부터 받는지, 앞당기거나 미루면 얼마가 되는지 바로 알려드립니다.</div>
+    </li>
+    <li>
+      <a href="/calc/gukmin-yeongeum-yesang-suryeongaek-gyesangi/">국민연금 예상수령액 간이 계산기</a>
+      <div class="a-desc">예상 가입기간과 평균소득월액을 입력하면 국민연금 월 예상수령액을 간단히 추정합니다.</div>
+    </li>
+    <li>
+      <a href="/calc/toejikgeum-gyesangi/">퇴직금 계산기 — 법정 공식 그대로</a>
+      <div class="a-desc">퇴직 전 3개월 임금과 재직일수만 넣으면 법에서 정한 방식대로 퇴직금을 계산합니다.</div>
+    </li>
+  </ul>
+
+  </main>
+  <footer class="site-footer">
+    <div class="foot-links">
+      <a href="/about/">사이트 소개</a>
+      <a href="/contact/">문의하기</a>
+      <a href="/privacy/">개인정보처리방침</a>
+      <a href="/terms/">이용약관</a>
+      <a href="/calc/">계산기 모음</a>
+      <a href="/feed.xml">RSS</a>
+    </div>
+    <p>본 사이트는 공식 기관이 아닌 안내 사이트입니다. 제도와 금액은 바뀔 수 있으니 신청 전 반드시 공식 기관에서 확인하세요.</p>
+    <p>신청 대행을 하지 않으며 이용자에게 어떤 수수료도 받지 않습니다.</p>
+    <p>&copy; 2026 생활정보 나침반</p>
+  </footer>
+  <nav class="tabbar" aria-label="주요 메뉴">
+    <a href="/"><span class="ico" aria-hidden="true">🏠</span>홈</a>
+    <a href="/calc/"><span class="ico" aria-hidden="true">🧮</span>계산기</a>
+    <a href="/pension/"><span class="ico" aria-hidden="true">💰</span>연금</a>
+    <a href="/subsidy/"><span class="ico" aria-hidden="true">🎫</span>지원금</a>
+    <a href="/about/"><span class="ico" aria-hidden="true">ℹ️</span>소개</a>
+  </nav>
+  <script>
+(function () {
+  var KEY = 'fontScale';
+  var root = document.documentElement;
+  function apply(v) { root.style.fontSize = (19 * v) + 'px'; }
+  try { var saved = parseFloat(localStorage.getItem(KEY)); if (saved > 0) apply(saved); } catch (e) {}
+  document.addEventListener('click', function (ev) {
+    var b = ev.target.closest ? ev.target.closest('[data-font]') : null;
+    if (!b) return;
+    var cur = 1;
+    try { cur = parseFloat(localStorage.getItem(KEY)) || 1; } catch (e) {}
+    var next = b.getAttribute('data-font') === 'up' ? Math.min(1.6, cur + 0.15) : Math.max(0.85, cur - 0.15);
+    next = Math.round(next * 100) / 100;
+    apply(next);
+    try { localStorage.setItem(KEY, next); } catch (e) {}
+  });
+})();
+</script>
+  <script>
+(function () {
+  var btn = document.getElementById('shareBtn');
+  var status = document.getElementById('shareStatus');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var data = { title: document.title, url: window.location.href };
+    if (navigator.share) {
+      navigator.share(data).catch(function () {});
+      return;
+    }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(data.url).then(function () {
+        if (status) { status.textContent = '링크가 복사되었습니다. 카카오톡에 붙여넣어 공유해주세요.'; setTimeout(function(){ status.textContent=''; }, 4000); }
+      });
+    }
+  });
+})();
+</script>
+</body>
+</html>

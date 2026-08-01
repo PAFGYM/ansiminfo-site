@@ -1,0 +1,2 @@
+# 애드센스 승인 후 게시자 ID 를 넣습니다 (ADSENSE_PUBLISHER_ID 환경변수).
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0
