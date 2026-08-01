@@ -64,6 +64,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/digital_howto/sajin-katok-jeonsong/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/health/chimae-ansimsenteo/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -124,6 +130,18 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/insurance/silson-boheom-cheongu/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/life/jonghap-sodeukse-yeongeum/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/life/silleop-geumyeo-60dae/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -179,6 +197,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/subsidy/gyeongno-udae-hyetaek/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/subsidy/munhwa-nurikadeu/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
