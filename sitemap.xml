@@ -46,6 +46,12 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/digital_howto/boiseu-pising-yebang/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/digital_howto/kakaotalk-geulssi-keuge/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -53,6 +59,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/implant/implant-geongangboheom-65se/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/inheritance/beopjeong-sangsokbun/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -171,6 +183,11 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/calc/sangsoksee-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/calc/beopjeong-sangsokbun-gyesangi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
