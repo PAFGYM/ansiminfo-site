@@ -58,6 +58,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/health/geongang-geomjin-daesangja/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/implant/implant-geongangboheom-65se/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -88,6 +94,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/insurance/ganbyeongin-boheom-hwagin/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/insurance/geongangboheomryo-jeongsan/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -113,6 +125,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/pension/gicho-yeongeum-sugeup-jagyeok/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/pension/gukmin-yeongeum-chunap-imuigyesok/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -149,6 +167,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/subsidy/noin-iljari-sincheong/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/subsidy/tongsinbi-jeongi-gammyeon/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
