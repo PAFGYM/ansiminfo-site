@@ -166,13 +166,43 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/pension/gicho-yeongeum-gukmin-yeongeum-yeongyegamaek/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/pension/gicho-yeongeum-sugeup-jagyeok/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/pension/gongjeok-yeongeum-yeongye-jedo/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/pension/gukmin-yeongeum-amnyu-chenap/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/pension/gukmin-yeongeum-chunap-imuigyesok/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/pension/gukmin-yeongeum-ihon-bunhal-yeongeum/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/pension/gukmin-yeongeum-jangae-yeongeum-jogeon/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -190,6 +220,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/pension/nongji-yeongeum-jogeon/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/pension/yeongeum-suryeong-geongangboheomnyo-yeonghyang/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/pension/yujok-yeongeum-sugeup-jogeon/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/subsidy/bojogeum24-johoe/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -197,6 +245,18 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/subsidy/energy-baucheo-sincheong/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/subsidy/gicho-saenghwal-sugeupja-jogeon/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/subsidy/gukmin-chwieop-jiwonjedo/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
