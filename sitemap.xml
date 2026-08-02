@@ -136,6 +136,24 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/life/beolcho-seongmyo-anjeon-beolssoim/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/life/chuseok-yeonhyu-byeongwon-yakguk-chatgi/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/life/dokgam-yebangjeopjong-muryo-daesang/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/life/jadongchasee-yeonnap/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -143,6 +161,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/life/jonghap-sodeukse-yeongeum/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/life/onnuri-sangpumgwon-sayongcheo/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -256,6 +280,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/subsidy/gingeup-bokji-jiwon/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/subsidy/gukmin-chwieop-jiwonjedo/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
@@ -263,6 +293,12 @@
   </url>
   <url>
     <loc>https://ansiminfo.com/subsidy/gyeongno-udae-hyetaek/</loc>
+    <lastmod>2026-08-02</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/subsidy/jugeo-geupyeo-sincheong/</loc>
     <lastmod>2026-08-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -315,12 +351,27 @@
     <priority>0.4</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/calc/gichoyeongeum-sugeup-panjeong-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/calc/jadongchasee-gyesangi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/calc/jonghapbudongsansee-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/calc/jeungyeosee-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/calc/geongangboheomlyo-jiyeokgaipja-chujeong-gyesangi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -335,6 +386,11 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/calc/yeonmaljeongsan-bumonim-gongje-jeolsaeaek-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/calc/gukmin-yeongeum-suryeong-nai-gyesangi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -345,7 +401,17 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://ansiminfo.com/calc/jaesansee-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
     <loc>https://ansiminfo.com/calc/toejikgeum-gyesangi/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://ansiminfo.com/calc/sileopgeupyeo-yesangaek-gyesangi/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
